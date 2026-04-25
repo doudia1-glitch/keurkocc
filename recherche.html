@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouver ma salle | KEURKOCC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">KEUR<span>KOCC</span></a></div>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="search-container">
+        <div class="search-card">
+            <h2>Portail de Placement</h2>
+            <p>Entrez votre matricule pour connaître votre salle et votre numéro de table.</p>
+            
+            <div class="input-group">
+                <input type="text" id="matriculeInput" placeholder="Ex: KK-2026-001">
+                <button onclick="chercherEleve()" id="searchBtn">Vérifier</button>
+            </div>
+
+            <div id="loader" class="loader" style="display:none;">Chargement...</div>
+            <div id="resultArea" class="result-box"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
